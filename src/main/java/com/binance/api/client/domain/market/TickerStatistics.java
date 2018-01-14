@@ -71,6 +71,10 @@ public class TickerStatistics {
   private long openTime;
 
   /**
+   * quoteVolume for the day
+   */
+  private String quoteVolume;
+  /**
    * Close time.
    */
   private long closeTime;
@@ -178,6 +182,10 @@ public class TickerStatistics {
     this.volume = volume;
   }
 
+  public String getQuoteVolume() { return quoteVolume; }
+
+  public void setQuoteVolume(String quoteVolume) { this.quoteVolume = quoteVolume; }
+
   public long getOpenTime() {
     return openTime;
   }
@@ -232,6 +240,7 @@ public class TickerStatistics {
         .append("highPrice", highPrice)
         .append("lowPrice", lowPrice)
         .append("volume", volume)
+        .append("quoteVolume",quoteVolume)
         .append("openTime", openTime)
         .append("closeTime", closeTime)
         .append("firstId", firstId)
